@@ -5,11 +5,13 @@ import { createVerificationEmailTemplate } from '@/lib/email-templates';
 import crypto from 'crypto';
 
 export async function POST(request: NextRequest) {
+  console.log('Downloads API called');
   try {
     const { name, email } = await request.json();
-
+    console.log('Received download request:', { name, email });
     // Validate input
     if (!name || !email) {
+      console.log('Validation failed: missing name or email');
       return NextResponse.json(
         { error: 'Name and email are required' },
         { status: 400 }
@@ -27,7 +29,7 @@ export async function POST(request: NextRequest) {
 
     // Generate verification token
     const verificationToken = crypto.randomBytes(32).toString('hex');
-
+    console.log('About to check for existing user in database');
     // Check if email already exists
     const { data: existingUser, error: checkError } = await supabaseAdmin
       .from('downloaders')
