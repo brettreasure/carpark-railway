@@ -10,8 +10,7 @@ import type { Metadata } from "next";
 
   export const metadata: Metadata = {
     title: "Not bad for a carpark",
-    description: "A burst-out-laughing commentary on ridiculous 
-  online reviews and modern Australian humour",
+    description: "A burst-out-laughing commentary on ridiculous online reviews and modern Australian humour",
   };
 
   export default function RootLayout({
