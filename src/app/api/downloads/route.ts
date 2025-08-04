@@ -36,6 +36,8 @@ export async function POST(request: NextRequest) {
       .select('email, email_verified')
       .eq('email', email)
       .single();
+    console.log('Database query completed:', { existingUser, checkError
+    });
 
     if (checkError && checkError.code !== 'PGRST116') {
       console.error('Database error:', checkError);
