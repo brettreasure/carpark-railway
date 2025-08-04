@@ -40,8 +40,7 @@ import { NextRequest, NextResponse } from 'next/server';
       }
 
       return NextResponse.json({
-        message: 'Thank you for your message! We will get back to you
-   soon.',
+        message: 'Thank you for your message!',
       });
 
     } catch (error) {
