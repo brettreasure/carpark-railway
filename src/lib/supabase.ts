@@ -1,7 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
 
-  // Temporary placeholder - will be replaced with environment 
-  variables
   const supabaseUrl = 'PLACEHOLDER_URL';
   const supabaseAnonKey = 'PLACEHOLDER_KEY';
 
