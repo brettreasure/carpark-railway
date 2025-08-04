@@ -1,12 +1,10 @@
 import { createClient } from '@supabase/supabase-js';
 
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+  // Temporary placeholder - will be replaced with environment 
+  variables
+  const supabaseUrl = 'PLACEHOLDER_URL';
+  const supabaseAnonKey = 'PLACEHOLDER_KEY';
 
   export const supabase = createClient(supabaseUrl, supabaseAnonKey);
-
-  // Server-side client with service role key
-  export const supabaseAdmin = createClient(
-    supabaseUrl,
-    process.env.SUPABASE_SERVICE_ROLE_KEY!
-  );
+  export const supabaseAdmin = createClient(supabaseUrl,
+  'PLACEHOLDER_SERVICE_KEY');
